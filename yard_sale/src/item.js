@@ -6,5 +6,7 @@ class Item {
         this.price = price
         this.id = id
         this.category_id = category_id
+
+        this.element = document.createElement("li")
     }
 }
