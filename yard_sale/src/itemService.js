@@ -5,9 +5,14 @@ class ItemService{
 
     // read action
     getItems(){
-        fetch(this.website + "/items")
-        .then (response =>response.json())
-        .then (info => console.table(info))
-        .catch()
+        fetch(this.website + `/items`)
+        .then(response => response.json())
+        .then(items => {
+            for (const item of items){
+                let i = new Item(item)
+                
+            }
+    })
+    .catch()
     }
 }
