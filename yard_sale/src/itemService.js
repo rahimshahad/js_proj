@@ -10,9 +10,8 @@ class ItemService{
         .then(items => {
             for (const item of items){
                 const i = new Item(item)
-                
             }
-    })
+        })
     .catch()
     // debugger
     }

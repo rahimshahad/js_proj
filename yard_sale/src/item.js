@@ -1,5 +1,6 @@
 class Item {
     static all = [];
+    static itemsContainer = document.getElementById("items-container")
     constructor({name, description, condition, price, id, category_id}){
         this.name = name
         this.description = description
@@ -26,5 +27,6 @@ class Item {
         return this.element
     }
 
+   
     
 }
