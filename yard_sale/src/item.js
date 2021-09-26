@@ -27,6 +27,9 @@ class Item {
         return this.element
     }
 
+    displayOnDom(){
+        Item.itemsContainer.appendChild(this.loadItem())
+    }
    
     
 }
