@@ -11,6 +11,7 @@ class Item {
         this.element = document.createElement("li")
         this.element.dataset.id = this.id
         this.element.id = `item - ${this.id}`
+        Item.all.push(this)
     }
 
     loadItem(){
