@@ -9,10 +9,12 @@ class ItemService{
         .then(response => response.json())
         .then(items => {
             for (const item of items){
-                let i = new Item(item)
+                const i = new Item(item)
                 
             }
     })
     .catch()
+    debugger
     }
+    
 }

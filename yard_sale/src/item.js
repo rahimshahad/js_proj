@@ -8,5 +8,21 @@ class Item {
         this.category_id = category_id
 
         this.element = document.createElement("li")
+        this.element.dataset.id = this.id
+        this.element.id = `item - ${this.id}`
     }
+
+    loadItem(){
+        this.element.innerHTML += `
+        <div>
+            <h2>${this.name}</h2>
+            <p>${this.condition}</p>
+            <p>${this.price}</p>
+        
+        </div>
+        `
+        return this.element
+    }
+
+    
 }
