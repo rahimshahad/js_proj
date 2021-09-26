@@ -5,8 +5,9 @@ class ItemService{
 
     // read action
     getItems(){
-        fetch(`${this.website}/items`)
+        fetch(this.website + "/items")
         .then (response =>response.json())
-        .then (items => console.log(items))
+        .then (info => console.table(info))
+        .catch()
     }
 }
