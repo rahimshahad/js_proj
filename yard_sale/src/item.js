@@ -1,4 +1,5 @@
 class Item {
+    static all = [];
     constructor({name, description, condition, price, id, category_id}){
         this.name = name
         this.description = description

@@ -14,7 +14,7 @@ class ItemService{
             }
     })
     .catch()
-    debugger
+    // debugger
     }
     
 }
