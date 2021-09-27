@@ -6,11 +6,11 @@ class categoryService{
     getCategories(){
         fetch(this.website + `/categories`)
         .then(res => res.json())
-        .then(info => {info.forEach(category =>{
+        .then(info => {info.map(category =>{
             const c = new Category(category)
             c.appendToMenu()
         })
         })
-        // debugger
+        //  debugger
     }
 }

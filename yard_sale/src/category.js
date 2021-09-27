@@ -6,9 +6,10 @@ class Category{
     }
 
     appendToMenu(){
-      const option = document.getElementById("selection")
+      const option = document.createElement("option")
        option.value = this.id;
        option.innerText = this.name;
+       categoryMenu.appendChild(option)
     //    debugger
     }
 }
