@@ -20,12 +20,14 @@ class ItemService{
     // create action
     createItem(){
         const itemObject = {
-            name: document.getElementById("name"),
-            description: document.getElementById("description"),
-            condition: document.getElementById("condition"),
-            price: document.getElementById("price")
+            name: document.getElementById("name").value,
+            description: document.getElementById("description").value,
+            condition: document.getElementById("condition").value,
+            price: document.getElementById("price").value
         }
-        
+
+
+
         fetch(this.website + `/items`)
         .then(response => response.json())
         .then(data => console.log(data))
