@@ -1,7 +1,6 @@
 class Item {
     static all = [];
     static itemsContainer = document.getElementById("items-container")
-     itemForm = document.getElementById("form-container")
     item
     constructor({name, description, condition, price, id, category_id}){
         this.name = name

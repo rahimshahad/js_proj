@@ -3,11 +3,12 @@ const website = "http://localhost:3000"
 const itemCall = new ItemService(website);
 const itemForm = document.getElementById("form-container")
 const categoryMenu = document.getElementById("category-list")
+const categoryCall = new categoryService(website);
 
 //--------------------------------------------------------------------
-itemCall.getItems()
-
-itemForm.addEventListener("submit", handleSubmit)
+itemCall.getItems();
+categoryCall.getCategories();
+itemForm.addEventListener("submit", handleSubmit);
 
 
 function handleSubmit(e){
