@@ -21,6 +21,7 @@ class Item {
         this.element.innerHTML += `
         <div>
             <h2>${this.name}</h2>
+            <p>${this.description}</p>
             <p>${this.condition}</p>
             <p>${this.price}</p>
         
