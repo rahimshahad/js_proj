@@ -27,7 +27,7 @@ class ItemService{
             price: document.getElementById("price").value,
             category_id: categoryMenu.value
         }
-         debugger;
+        //  debugger;
         
         const config = {
             method: 'post',
