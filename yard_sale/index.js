@@ -2,6 +2,7 @@
 const website = "http://localhost:3000"
 const itemCall = new ItemService(website);
 const itemForm = document.getElementById("form-container")
+const categoryMenu = document.getElementById("category-list")
 
 //--------------------------------------------------------------------
 itemCall.getItems()

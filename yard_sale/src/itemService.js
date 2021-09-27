@@ -10,6 +10,7 @@ class ItemService{
         .then(items => {
             for (const item of items){
                 const i = new Item(item)
+                // debugger
                 i.displayOnDom()
             }
         })
@@ -23,9 +24,10 @@ class ItemService{
             name: document.getElementById("name").value,
             description: document.getElementById("description").value,
             condition: document.getElementById("condition").value,
-            price: document.getElementById("price").value
+            price: document.getElementById("price").value,
+            category_id: categoryMenu.value
         }
-        // debugger;
+         debugger;
         
         const config = {
             method: 'post',
