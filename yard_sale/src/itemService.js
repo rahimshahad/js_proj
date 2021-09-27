@@ -18,8 +18,11 @@ class ItemService{
     }
 
     // create action
-    // createItem(){
-    //     const itemObject:
-    // }
+    createItem(){
+        fetch(this.website + `/items`)
+        .then(response => response.json())
+        .then(data => console.log(data))
+        debugger
+    }
     
 }
