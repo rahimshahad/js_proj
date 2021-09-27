@@ -19,19 +19,26 @@ class ItemService{
 
     // create action
     createItem(){
-        const itemObject = {
+        const item = {
             name: document.getElementById("name").value,
             description: document.getElementById("description").value,
             condition: document.getElementById("condition").value,
             price: document.getElementById("price").value
         }
-
-
-
-        fetch(this.website + `/items`)
+        // debugger;
+        
+        const config = {
+            method: 'post',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(item)
+        }
+        fetch(this.website + `/items`, config)
         .then(response => response.json())
-        .then(data => console.log(data))
-        debugger
+        .then(data => {
+            console.log(data)
+        })
     }
     
 }
