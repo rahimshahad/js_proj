@@ -18,8 +18,8 @@ class ItemService{
     }
 
     // create action
-    createItem(){
-        
-    }
+    // createItem(){
+    //     const itemObject:
+    // }
     
 }

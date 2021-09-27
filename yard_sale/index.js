@@ -6,11 +6,12 @@ const itemForm = document.getElementById("form-container")
 //--------------------------------------------------------------------
 itemCall.getItems()
 
-itemForm.addEventListener("submit", handleSubmit())
+itemForm.addEventListener("submit", handleSubmit)
 
 
 function handleSubmit(e){
     e.preventDefault();
     e.target.reset();
-    e.createItem()
+    // debugger
+    itemCall.createItem();
 }
