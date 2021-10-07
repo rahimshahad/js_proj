@@ -3,47 +3,48 @@ class ItemsController < ApplicationController
 
   # GET /items
   def index
-    @items = Item.all
+    items = Item.all
     
-    render json: @items
+    render json: items
   end
 
   # GET /items/1
   def show
-    render json: @item
+    render json: item
   end
 
   # POST /items
   def create
     # byebug
-    @item = Item.new(item_params)
+    item = Item.new(item_params)
 
-    if @item.save
-      render json: @item, status: :created, location: @item
+    if item.save
+      render json: item, status: :created, location: item
     else
-      render json: @item.errors, status: :unprocessable_entity
+      render json: {error: "Couldn't save"}
     end
   end
 
   # PATCH/PUT /items/1
   def update
-    if @item.update(item_params)
-      render json: @item
+    if item.update(item_params)
+      render json: item
     else
-      render json: @item.errors, status: :unprocessable_entity
+      render json: {error: "Couldn't update"}
     end
   end
 
   # DELETE /items/1
   def destroy
-    @item.destroy
-    render json: {message: '{@item.name} destroyed'}
+    
+    item.destroy
+    render json: {message: '#{item.name} destroyed'}
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_item
-      @item = Item.find(params[:id])
+      item = Item.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
