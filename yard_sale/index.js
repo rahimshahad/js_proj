@@ -13,7 +13,7 @@ itemForm.addEventListener("submit", handleSubmit);
 
 function handleSubmit(e){
     e.preventDefault();
-    e.target.reset();
     // debugger
     itemCall.createItem();
+    e.target.reset();
 }

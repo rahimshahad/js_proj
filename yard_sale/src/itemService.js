@@ -10,7 +10,7 @@ class ItemService{
         .then(items => {
             for (const item of items){
                 const i = new Item(item)
-                //  debugger
+                  
                 i.displayOnDom()
             }
         })
@@ -27,8 +27,8 @@ class ItemService{
             price: document.getElementById("price").value,
             category_id: categoryMenu.value
         }
-        // debugger;
-        
+         
+        // debugger
         const config = {
             method: 'post',
             headers: {
@@ -39,7 +39,8 @@ class ItemService{
         fetch(this.website + `/items`, config)
         .then(response => response.json())
         .then(data => {
-            console.log(data)
+            const v = new Item(data)
+            v.displayOnDom()
         })
     }
     

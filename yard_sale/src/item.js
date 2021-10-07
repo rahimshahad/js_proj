@@ -23,8 +23,9 @@ class Item {
             <p>${this.description}</p>
             <p>${this.condition}</p>
             <p>${this.price}</p>
-        
         </div>
+        <button id="delete-bttn">Delete</button><br>
+        <br>
         `
         return this.element
     }
