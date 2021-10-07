@@ -35,10 +35,9 @@ class Item {
         Item.itemsContainer.appendChild(this.loadItem())
     }
    
-    handleClick(e){
+    handleClick = (e) => {
         if(e.target.innerText === "Delete"){
-            itemCall.deleteItem()
-            debugger
+            itemCall.deleteItem(this.id)     
         }
     }
     

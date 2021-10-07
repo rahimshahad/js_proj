@@ -43,5 +43,11 @@ class ItemService{
             v.displayOnDom()
         })
     }
+
+    deleteItem(id){
+        fetch(`${this.website}/items/${id}`, {method: "DELETE"})
+        .then(response => response.json())
+        .then(json => alert(json.message))
+    }
     
 }
