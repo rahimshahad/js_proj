@@ -13,6 +13,7 @@ class Item {
         this.element = document.createElement("li")
         this.element.dataset.id = this.id
         this.element.id = `item - ${this.id}`
+        this.element.addEventListener("click", this.handleClick)
         Item.all.push(this)
     }
 
@@ -34,5 +35,11 @@ class Item {
         Item.itemsContainer.appendChild(this.loadItem())
     }
    
+    handleClick(e){
+        if(e.target.innerText === "Delete"){
+            itemCall.deleteItem()
+            debugger
+        }
+    }
     
 }
