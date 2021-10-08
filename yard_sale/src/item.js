@@ -26,6 +26,7 @@ class Item {
             <p>${this.price}</p>
         </div>
         <button id="delete-bttn">Delete</button><br>
+        <button id="edit-bttn">Edit</button><br>
         <br>
         `
         return this.element

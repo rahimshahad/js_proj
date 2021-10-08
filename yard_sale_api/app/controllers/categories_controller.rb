@@ -6,3 +6,5 @@ class CategoriesController < ApplicationController
     render json: categories
   end
 
+  end
+
