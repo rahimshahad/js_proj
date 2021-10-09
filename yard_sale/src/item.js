@@ -58,7 +58,7 @@ class Item {
         this.description = this.element.querySelector(".edit-description").value
         this.condition = this.element.querySelector(".edit-condition").value
         this.price = this.element.querySelector(".edit-price").value
-        itemCall.editItem()
+        itemCall.editItem(this)
         // debugger
     }
 

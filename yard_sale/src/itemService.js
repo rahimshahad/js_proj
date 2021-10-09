@@ -61,7 +61,14 @@ class ItemService{
 
     }
 
-    editItem(){
+    editItem(item){
+        const {name, description, condition, price} = item
+        const itemInfo = {
+            name, description, condition, price
+        }
+
+       
+        debugger
         
     }
     
