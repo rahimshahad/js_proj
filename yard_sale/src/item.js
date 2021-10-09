@@ -20,13 +20,13 @@ class Item {
     loadItem(){
         this.element.innerHTML += `
         <div data-id="${this.id}">
-            <h2 class="name">Product: ${this.name}</h2>
-            <p class="description"><strong>Description:</strong> ${this.description}</p>
-            <p class="condition"><strong>Condition:</strong> ${this.condition}</p>
-            <p class="price"><strong>Price:</strong> ${this.price}</p>
+            <h2 class="name"> ${this.name}</h2>
+            <p class="description"> ${this.description}</p>
+            <p class="condition">${this.condition}</p>
+            <p class="price"> ${this.price}</p>
         </div>
-        <button id="delete-bttn">Delete</button><br>
-        <button id="edit-bttn">Edit</button><br>
+        <button class = "delete" id="delete-bttn">Delete Item</button><br>
+        <button class ="edit" id="edit-bttn">Edit Item</button><br>
         <br>
         `
         return this.element
@@ -42,6 +42,7 @@ class Item {
         }
         else if(e.target.innerText === "Edit Item") {
             // console.log(e.target)
+            // debugger
             e.target.innerText = "Save Item"
             this.createEditForm()
         }
@@ -50,6 +51,15 @@ class Item {
             e.target.innerText = "Edit Item"
             this.updatedItem()
         }
+    }
+
+    updatedItem(){
+        this.name = this.element.querySelector(".edit-name").value
+        this.description = this.element.querySelector(".edit-description").value
+        this.condition = this.element.querySelector(".edit-condition").value
+        this.price = this.element.querySelector(".edit-price").value
+        itemCall.editItem()
+        // debugger
     }
 
     createEditForm(){
