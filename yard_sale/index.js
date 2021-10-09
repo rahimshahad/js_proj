@@ -6,13 +6,13 @@ const categoryMenu = document.getElementById("category-list")
 const categoryCall = new categoryService(website);
 const list = document.getElementById("items-container")
 const search = document.forms["search-items"].querySelector("input");
-
+const hide = document.getElementById("hide")
 //--------------------------------------------------------------------
 itemCall.getItems();
 categoryCall.getCategories();
 itemForm.addEventListener("submit", handleSubmit);
 search.addEventListener("keyup", searchItem);
-
+hide.addEventListener("click", hideItem)
 
 function handleSubmit(e){
     e.preventDefault();
@@ -34,4 +34,8 @@ function searchItem(e){
                 item.style.display = "none"
             }
         })
+}
+
+function hideItem(){
+    debugger
 }
