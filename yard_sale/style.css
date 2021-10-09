@@ -6,8 +6,6 @@ body{
     font-size: 14px;
     letter-spacing: .5px;
     width: 80%;
-    /* background: center/cover url("https://burst.shopify.com/photos/person-shops-for-clothes-in-an-outdoor-market?q=market");
-    background-size: 80%; */
   
 }
 
@@ -18,7 +16,9 @@ body{
     border-radius: 50%;  
     text-align: center;
     color: #ef9273;
-    padding-top: 50px;
+    padding-top: 40px;
+    padding-bottom: 10px;
+
    
 }
 
@@ -27,7 +27,7 @@ button{
     background-color: #ef9273;
     font-size: 15px;
     border: 1px solid #e1f1ff;
-    border-radius: 10%
+    border-radius: 30%
 }
 
 button:hover {
@@ -48,7 +48,7 @@ button:hover {
     color: aliceblue;
     width: 100px;
     height: 30;
-    transition: margin-right 0.1s; 
+    /* transition: margin-right 0.1s;  */
     /* background-color: magenta; */
     transition: background-color 1s ease-in, border-radius 2s;
 
@@ -60,7 +60,18 @@ button:hover {
 
 h1{
     font-size: 40px;
+    animation:blinkingText 2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #ef9273;    }
+    49%{    color: #ef9273; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #ef9273;    }
+}
 
+#items-container{
+    text-align: center
 }
 
 
