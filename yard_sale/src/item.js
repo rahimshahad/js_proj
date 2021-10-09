@@ -38,8 +38,21 @@ class Item {
    
     handleClick = (e) => {
         if(e.target.innerText === "Delete"){
-            itemCall.deleteItem(this.id)     
+            itemCall.deleteItem(e)     
         }
+        else if(e.target.innerText === "Edit") {
+            // console.log(e.target)
+            this.createEditForm()
+        }
+        else if(e.target.innerText === "Save") {
+            
+        }
+    }
+
+    createEditForm(){
+        const editForm = this.element.querySelector("div")
+        for (const element of editForm.children)
+        debugger
     }
     
 }

@@ -39,15 +39,30 @@ class ItemService{
         fetch(this.website + `/items`, config)
         .then(response => response.json())
         .then(data => {
-            const v = new Item(data)
-            v.displayOnDom()
+            // render json: {error: "Couldn't save"}
+            if(data.error){
+                alert(data.error)
+            }
+            else{
+                const v = new Item(data)
+                v.displayOnDom()
+            }
+            
         })
     }
 
-    deleteItem(id){
+    deleteItem(e){
+        const id  = e.target.parentElement.dataset.id
+        e.target.parentElement.remove()
+        // debugger
         fetch(`${this.website}/items/${id}`, {method: "DELETE"})
         .then(response => response.json())
         .then(json => alert(json.message))
+
+    }
+
+    editItem(){
+        
     }
     
 }
