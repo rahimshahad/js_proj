@@ -25,6 +25,12 @@ function searchItem(e){
     const itemsLi = list.getElementsByTagName("li");
     Array.from(itemsLi).forEach(item =>
         {
-            const name = item
+            const name = item.querySelector(".name").textContent;
+            if(name.toLowerCase().indexOf(term) != -1) {
+                item.style.display = "block";
+            }
+            else{
+                item.style.display = "none"
+            }
         })
 }
