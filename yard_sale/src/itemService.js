@@ -67,7 +67,12 @@ class ItemService{
             name, description, condition, price
         }
 
-       
+        const config = {method: "PATCH"
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(itemInfo)
+    }
         debugger
         
     }
