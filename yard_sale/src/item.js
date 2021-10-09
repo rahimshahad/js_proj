@@ -18,7 +18,7 @@ class Item {
     }
 
     loadItem(){
-        this.element.innerHTML += `
+        this.element.innerHTML = `
         <div data-id="${this.id}">
             <h2 class="name"> ${this.name}</h2>
             <p class="description"> ${this.description}</p>

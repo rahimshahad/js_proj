@@ -62,18 +62,22 @@ class ItemService{
     }
 
     editItem(item){
-        const {name, description, condition, price} = item
+        const {name, description, condition, price, id} = item
         const itemInfo = {
             name, description, condition, price
         }
 
-        const config = {method: "PATCH"
+        const config = {method: "PATCH",
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(itemInfo)
     }
-        debugger
+        // debugger
+        fetch(`${this.website}/items/${id}`, config)
+        .then(item.loadItem())
+        // .then(response => response.json())
+        // .then(json => alert(json.message))
         
     }
     
