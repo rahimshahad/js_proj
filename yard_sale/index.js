@@ -37,5 +37,9 @@ function searchItem(e){
 }
 
 function hideItem(){
-    debugger
+    if(hide.checked){
+        list.style.display = "none";
+    } else {
+        list.style.display = "initial";
+    }
 }
