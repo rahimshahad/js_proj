@@ -6,6 +6,7 @@ const categoryMenu = document.getElementById("category-list")
 const categoryCall = new categoryService(website);
 const list = document.getElementById("items-container")
 const search = document.forms["search-items"].querySelector("input");
+
 //--------------------------------------------------------------------
 itemCall.getItems();
 categoryCall.getCategories();
