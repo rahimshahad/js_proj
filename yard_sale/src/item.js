@@ -19,11 +19,11 @@ class Item {
 
     loadItem(){
         this.element.innerHTML += `
-        <div>
-            <h2>${this.name}</h2>
-            <p>${this.description}</p>
-            <p>${this.condition}</p>
-            <p>${this.price}</p>
+        <div data-id="${this.id}">
+            <h2 class="name">Product: ${this.name}</h2>
+            <p class="description"><strong>Description:</strong> ${this.description}</p>
+            <p class="condition"><strong>Condition:</strong> ${this.condition}</p>
+            <p class="price"><strong>Price:</strong> ${this.price}</p>
         </div>
         <button id="delete-bttn">Delete</button><br>
         <button id="edit-bttn">Edit</button><br>
@@ -37,22 +37,29 @@ class Item {
     }
    
     handleClick = (e) => {
-        if(e.target.innerText === "Delete"){
+        if(e.target.innerText === "Delete Item"){
             itemCall.deleteItem(e)     
         }
-        else if(e.target.innerText === "Edit") {
+        else if(e.target.innerText === "Edit Item") {
             // console.log(e.target)
+            e.target.innerText = "Save Item"
             this.createEditForm()
         }
-        else if(e.target.innerText === "Save") {
-            
+        else if(e.target.innerText === "Save Item") {
+            console.log("saved")
+            e.target.innerText = "Edit Item"
+            this.updatedItem()
         }
     }
 
     createEditForm(){
         const editForm = this.element.querySelector("div")
-        for (const element of editForm.children)
-        debugger
+        for (const element of editForm.children){
+        const input = element.innerText;
+        const name = element.classList[0];
+        element.outerHTML = `<input type="text" class="edit-${name}" value="${input}" />`
+        }
+        // debugger
     }
     
 }
