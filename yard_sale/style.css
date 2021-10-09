@@ -26,4 +26,17 @@ button:hover {
     color: aliceblue;
 }
 
+#submit{
+    width: 70px;
+    color: #2a9d8f;
+    border: 1px solid black;
+    border-radius: 10%;
+}
+
+#submit:hover{
+    background-color: #2a9d8f;
+    color: aliceblue;
+}
+
+
 
