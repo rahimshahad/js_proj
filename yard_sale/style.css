@@ -5,7 +5,19 @@ body{
     letter-spacing: .5px;
 }
 
-h1, {
+#wrapper{
     color: #030e12;
     text-align: center;
+    width: 100%;
+    border-radius: 50%;  
 }
+
+button{
+    width: 100px;
+    background-color: #5bccf6;
+    font-size: 15px;
+    border: 1px solid #e1f1ff;
+    border-radius: 10%
+}
+
+
